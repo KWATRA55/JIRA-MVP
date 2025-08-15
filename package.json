@@ -23,6 +23,7 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
-        "nodemon": "^3.1.10"
+        "nodemon": "^3.1.10",
+        "serverless-http": "^3.2.0"
     }
 }
