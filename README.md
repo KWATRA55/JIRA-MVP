@@ -1,4 +1,4 @@
-# JIRA MVP Clone
+# JIRA MVP
 
 A full-stack, minimal JIRA-like application built with the MERN stack and Next.js. This project features a fully functional Kanban board, project and sprint management, user authentication, and an analytics dashboard.
 
