@@ -1,0 +1,15 @@
+# Netlify configuration file
+
+[build]
+  # This command tells Netlify to build our Next.js client
+  command = "npm run build"
+  # The directory where our built frontend will be
+  publish = "client/.next"
+  # The directory where our serverless functions live
+  functions = "netlify/functions"
+
+[[redirects]]
+  # This rule forwards all API requests to our serverless function
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
