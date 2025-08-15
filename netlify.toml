@@ -1,12 +1,16 @@
-# Netlify configuration file
+# Netlify configuration using the official Next.js plugin
 
 [build]
-  command = "npm run install-deps && npm run build"
-  publish = "client/.next"
+  # The build command and publish directory are now automatically handled by the plugin.
+  # We just need to tell it where our functions are.
   functions = "netlify/functions"
 
+[[plugins]]
+  # This is the essential plugin that makes Next.js work seamlessly on Netlify.
+  package = "@netlify/plugin-nextjs"
+
 [[redirects]]
-  # This rule forwards all API requests to our serverless function
+  # This rule for our API remains the same.
   from = "/api/*"
   to = "/.netlify/functions/api/:splat"
   status = 200
