@@ -33,6 +33,8 @@ A full-stack, minimal JIRA-like application built with the MERN stack and Next.j
 -   **MongoDB** (with Mongoose)
 -   **JSON Web Tokens (JWT)** for authentication
 
+**Preview:** https://jira-mvp.netlify.app/login
+
 ## Getting Started
 
 ### Prerequisites
