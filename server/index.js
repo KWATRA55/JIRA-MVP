@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-const cookieParser = require('cookie-parser'); // <-- NEW: For parsing cookies
+const cookieParser = require('cookie-parser'); 
 
 // Load environment variables from root directory
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(cookieParser()); // <-- NEW: Use the cookie parser middleware
+app.use(cookieParser()); 
 
 // Check if MongoDB URI is available
 if (!process.env.MONGODB_URI) {
@@ -33,7 +33,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 });
 
 // Routes
-app.use('/api/users', require('./routes/userRoutes')); // <-- NEW: Add user routes
+app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/projects', require('./routes/projects'));
 app.use('/api/sprints', require('./routes/sprints'));
 app.use('/api/issues', require('./routes/issues'));
