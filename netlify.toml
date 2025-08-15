@@ -1,13 +1,15 @@
-# Netlify configuration using the official Next.js plugin
-
 [build]
-  # The build command and publish directory are now automatically handled by the plugin.
-  # We just need to tell it where our functions are.
+  # We still need to tell Netlify where our serverless functions are.
   functions = "netlify/functions"
 
 [[plugins]]
-  # This is the essential plugin that makes Next.js work seamlessly on Netlify.
   package = "@netlify/plugin-nextjs"
+
+  # --- THE FIX IS HERE ---
+  # This "inputs" block gives specific instructions TO THE PLUGIN.
+  # We are telling it that the Next.js app is in the "client" directory.
+  [plugins.inputs]
+  publish = "client/.next"
 
 [[redirects]]
   # This rule for our API remains the same.
