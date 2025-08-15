@@ -44,7 +44,7 @@ A full-stack, minimal JIRA-like application built with the MERN stack and Next.j
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    git clone [https://github.com/KWATRA55/JIRA-MVP.git]
     cd your-repo-name
     ```
 
