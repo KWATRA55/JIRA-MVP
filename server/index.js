@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 
-const app = express(); // The app is created here
+const app = express();
 
 // Middleware
 app.use(cors());

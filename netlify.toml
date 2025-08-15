@@ -1,11 +1,8 @@
 # Netlify configuration file
 
 [build]
-  # This command tells Netlify to build our Next.js client
-  command = "npm run build"
-  # The directory where our built frontend will be
+  command = "npm run install-deps && npm run build"
   publish = "client/.next"
-  # The directory where our serverless functions live
   functions = "netlify/functions"
 
 [[redirects]]
